@@ -18,13 +18,16 @@ end
 # Spree Commerce
 spree_path = ENV['SPREE_PATH']
 
+
 if spree_path
   gem 'spree', path: "#{spree_path}/spree"
   gem 'spree_admin', path: "#{spree_path}/spree/admin"
+  gem 'spree_storefront', path: "#{spree_path}/spree/storefront"
 else
   spree_version = '>= 5.4.0'
   gem 'spree', spree_version
   gem 'spree_admin', spree_version
+  gem 'spree_storefront', spree_version
 end
 
 # Extensions
